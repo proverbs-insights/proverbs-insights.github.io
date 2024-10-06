@@ -1,0 +1,1 @@
+# proverbs-insights.github.io
