@@ -47,7 +47,7 @@ fetch('/languages/go/proverbs.json')
         const urlRegex = /(.*?)\((https?:\/\/[^\s)]+)\)/g;
         
         return source.replace(urlRegex, (match, text, url) => {
-            return `${text}<a href="${url}" target="_blank" rel="noopener noreferrer">(${url})</a>`;
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
         });
     }
 
