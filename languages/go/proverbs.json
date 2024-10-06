@@ -1,0 +1,248 @@
+[
+    {
+        "english": "Simple, Poetic, Pithy",
+        "chinese": "简洁、优雅、精炼",
+        "category": "Go Philosophy",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb encapsulates the core design philosophy of Go. It emphasizes that Go strives for simplicity in its syntax and concepts, elegance in its solutions, and conciseness in its expressions. This approach makes Go code easy to write, read, and maintain, which is crucial for large-scale software development and long-term project sustainability.",
+            "zh": "这句谚语概括了 Go 的核心设计理念。它强调 Go 追求语法和概念的简单性，解决方案的优雅性，以及表达的简洁性。这种方法使 Go 代码易于编写、阅读和维护，这对于大规模软件开发和长期项目可持续性至关重要。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"><style>.background{fill:#1e1e1e;}.title{font-family:'Courier New',monospace;font-size:22px;fill:#61dafb;}.subtitle{font-family:'Courier New',monospace;font-size:12px;fill:#bb86fc;}.text{font-family:Arial,sans-serif;font-size:12px;fill:#ffffff;}.code{font-family:'Courier New',monospace;font-size:11px;fill:#ff7b72;}.circuit{stroke:#6e6e6e;fill:none;}</style><rect class=\"background\" width=\"400\" height=\"600\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" class=\"title\">编程语言新解</text><line x1=\"10\" y1=\"45\" x2=\"390\" y2=\"45\" stroke=\"#6e6e6e\"/><text x=\"10\" y=\"65\" class=\"subtitle\"><tspan x=\"10\" dy=\"0\">\"简洁、优雅、精炼\"</tspan><tspan x=\"10\" dy=\"16\">\"Simple, Poetic, Pithy\"</tspan><tspan x=\"10\" dy=\"16\">— Rob Pike / 罗布·派克</tspan></text><text x=\"10\" y=\"140\" class=\"text\"><tspan x=\"10\" dy=\"0\">派克告诉我们：代码应该像俳句，不是史诗。</tspan><tspan x=\"10\" dy=\"16\">想象一下，如果莎士比亚是程序员，他会被要求</tspan><tspan x=\"10\" dy=\"16\">把\"生存还是毁灭\"压缩成一个表情符号。这就是</tspan><tspan x=\"10\" dy=\"16\">编程的禅境：用最少的字符传达最深的思想。</tspan><tspan x=\"10\" dy=\"16\">代码就是诗，注释就是标点，bug 就是错别字。</tspan></text><text x=\"10\" y=\"240\" class=\"text\"><tspan x=\"10\" dy=\"0\">Pike tells us: code should be haiku, not epic. Imagine</tspan><tspan x=\"10\" dy=\"16\">if Shakespeare was a programmer, he'd be asked to</tspan><tspan x=\"10\" dy=\"16\">compress \"To be or not to be\" into an emoji. This is</tspan><tspan x=\"10\" dy=\"16\">the Zen of programming: conveying the deepest thoughts</tspan><tspan x=\"10\" dy=\"16\">with the fewest characters. Code is poetry, comments</tspan><tspan x=\"10\" dy=\"16\">are punctuation, and bugs are typos.</tspan></text><text x=\"10\" y=\"350\" class=\"code\"><tspan x=\"10\" dy=\"0\">func 人生(思考 string) string {</tspan><tspan x=\"30\" dy=\"16\">switch 思考 {</tspan><tspan x=\"50\" dy=\"16\">case \"简洁\":</tspan><tspan x=\"70\" dy=\"16\">return \"少即是多\"</tspan><tspan x=\"50\" dy=\"16\">case \"优雅\":</tspan><tspan x=\"70\" dy=\"16\">return \"代码如诗\"</tspan><tspan x=\"50\" dy=\"16\">case \"精炼\":</tspan><tspan x=\"70\" dy=\"16\">return \"一行胜千言\"</tspan><tspan x=\"50\" dy=\"16\">default:</tspan><tspan x=\"70\" dy=\"16\">return \"重构\" // 生存还是毁灭</tspan><tspan x=\"30\" dy=\"16\">}</tspan><tspan x=\"10\" dy=\"16\">}</tspan></text><text x=\"10\" y=\"520\" class=\"text\"><tspan x=\"10\" dy=\"0\">结论：优秀的程序员不是在写代码，而是在删代码。</tspan><tspan x=\"10\" dy=\"20\">Conclusion: Great programmers don't write code,</tspan><tspan x=\"10\" dy=\"20\">they delete it.</tspan></text><path class=\"circuit\" d=\"M5,5 L395,5 L395,595 L5,595 L5,5 M200,5 L200,595 M5,300 L395,300\"/></svg>"
+    },
+    {
+        "english": "Don't communicate by sharing memory, share memory by communicating.",
+        "chinese": "不要通过共享内存来通信，而要通过通信来共享内存。",
+        "category": "Concurrency",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb emphasizes Go's approach to concurrency. Instead of directly sharing and manipulating shared memory between goroutines, which can lead to race conditions and complex locking mechanisms, Go encourages the use of channels for communication and synchronization. This approach simplifies concurrent programming and reduces the likelihood of concurrent access issues.",
+            "zh": "这个谚语强调了 Go 处理并发的方法。Go 鼓励使用通道进行通信和同步，而不是在 goroutine 之间直接共享和操作共享内存（这可能导致竞态条件和复杂的锁定机制）。这种方法简化了并发编程，并降低了并发访问问题的可能性。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"><style>    .background { fill: #1e1e1e; }    .title { font-family: 'Courier New', monospace; font-size: 22px; fill: #61dafb; }    .subtitle { font-family: 'Courier New', monospace; font-size: 12px; fill: #bb86fc; }    .text { font-family: Arial, sans-serif; font-size: 12px; fill: #ffffff; }    .code { font-family: 'Courier New', monospace; font-size: 11px; fill: #ff7b72; }    .circuit { stroke: #6e6e6e; fill: none; }  </style><rect class=\"background\" width=\"400\" height=\"600\" /><text x=\"200\" y=\"30\" text-anchor=\"middle\" class=\"title\">箴言新解</text><line x1=\"10\" y1=\"45\" x2=\"390\" y2=\"45\" stroke=\"#6e6e6e\" /><text x=\"10\" y=\"65\" class=\"subtitle\"><tspan x=\"10\" dy=\"0\">\"不要通过共享内存来通信，要通过通信来共享内存。\"</tspan><tspan x=\"10\" dy=\"16\">\"Don't communicate by sharing memory, share memory</tspan><tspan x=\"10\" dy=\"16\">by communicating.\"</tspan><tspan x=\"10\" dy=\"16\">-- Rob Pike 罗布·派克</tspan></text><text x=\"10\" y=\"150\" class=\"text\"><tspan x=\"10\" dy=\"0\">想象一下，如果大脑是一个多核处理器，而思想是并发运行的线程。</tspan><tspan x=\"10\" dy=\"16\">派克告诉我们：不要像神经元一样直接共享电信号，而要像八卦群友</tspan><tspan x=\"10\" dy=\"16\">一样通过微信群来分享\"记忆\"。这就是并发编程的社交革命：用消息</tspan><tspan x=\"10\" dy=\"16\">传递取代了共享状态，就像用群聊取代了脑电波。</tspan></text><text x=\"10\" y=\"230\" class=\"text\"><tspan x=\"10\" dy=\"0\">Imagine if the brain was a multi-core processor and thoughts were</tspan><tspan x=\"10\" dy=\"16\">concurrent threads. Pike is telling us: don't share electrical signals</tspan><tspan x=\"10\" dy=\"16\">directly like neurons, instead share \"memories\" through WeChat</tspan><tspan x=\"10\" dy=\"16\">groups like gossip buddies. This is the social revolution of concurrent</tspan><tspan x=\"10\" dy=\"16\">programming: replacing shared states with message passing, like</tspan><tspan x=\"10\" dy=\"16\">replacing brainwaves with group chats.</tspan></text><text x=\"10\" y=\"340\" class=\"code\"><tspan x=\"10\" dy=\"0\">func 八卦群(消息 chan string) {</tspan><tspan x=\"30\" dy=\"16\">  for {</tspan><tspan x=\"50\" dy=\"16\">    记忆 := &lt;-消息</tspan><tspan x=\"50\" dy=\"16\">    传播(记忆)</tspan><tspan x=\"50\" dy=\"16\">    // 不要直接窥探他人大脑!</tspan><tspan x=\"50\" dy=\"16\">    // Don't peek into others' brains directly!</tspan><tspan x=\"30\" dy=\"16\">  }</tspan><tspan x=\"10\" dy=\"16\">}</tspan></text><text x=\"10\" y=\"520\" class=\"text\"><tspan x=\"10\" dy=\"0\">结论：并发编程就是把独立思考变成了有组织的八卦。</tspan><tspan x=\"10\" dy=\"20\">Conclusion: Concurrent programming turns independent thinking</tspan><tspan x=\"10\" dy=\"20\">into organized gossip.</tspan></text><path class=\"circuit\" d=\"M5,5 L395,5 L395,595 L5,595 L5,5 M200,5 L200,595 M5,300 L395,300\" /></svg>"
+    },
+    {
+        "english": "Concurrency is not parallelism.",
+        "chinese": "并发不是并行。",
+        "category": "Concurrency",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb clarifies a common misconception. Concurrency is about structuring a program to handle multiple tasks, potentially simultaneously. Parallelism is about actually executing multiple tasks at the same time. Go's concurrency model, based on goroutines and channels, makes it easy to write concurrent programs, but whether they run in parallel depends on the available CPU cores and the Go runtime's decisions.",
+            "zh": "这句谚语澄清了一个常见的误解。并发是关于构建程序以处理多个任务，这些任务可能同时进行。而并行是指实际同时执行多个任务。Go 的并发模型基于 goroutine 和 channel，使编写并发程序变得容易，但它们是否并行运行取决于可用的 CPU 核心和 Go 运行时的决策。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"><style>.background{fill:#1e1e1e;}.title{font-family:'Courier New',monospace;font-size:22px;fill:#61dafb;}.subtitle{font-family:'Courier New',monospace;font-size:12px;fill:#bb86fc;}.text{font-family:Arial,sans-serif;font-size:12px;fill:#ffffff;}.code{font-family:'Courier New',monospace;font-size:11px;fill:#ff7b72;}.circuit{stroke:#6e6e6e;fill:none;}</style><rect class=\"background\" width=\"400\" height=\"600\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" class=\"title\">编程语言新解</text><line x1=\"10\" y1=\"45\" x2=\"390\" y2=\"45\" stroke=\"#6e6e6e\"/><text x=\"10\" y=\"65\" class=\"subtitle\"><tspan x=\"10\" dy=\"0\">\"并发不是并行。\"</tspan><tspan x=\"10\" dy=\"16\">\"Concurrency is not parallelism.\"</tspan><tspan x=\"10\" dy=\"16\">— Rob Pike / 罗布·派克</tspan></text><text x=\"10\" y=\"140\" class=\"text\"><tspan x=\"10\" dy=\"0\">派克在告诉我们：并发是一个人同时泡十杯茶，</tspan><tspan x=\"10\" dy=\"16\">并行是十个人一起泡茶。并发是独立厨师在一个厨房</tspan><tspan x=\"10\" dy=\"16\">里忙碌，并行是十个厨房同时运作。并发是你的大脑</tspan><tspan x=\"10\" dy=\"16\">在想晚餐吃什么的同时还在思考人生，并行是你长出</tspan><tspan x=\"10\" dy=\"16\">了两个脑子。并发是效率的艺术，并行是资源的奢侈。</tspan></text><text x=\"10\" y=\"240\" class=\"text\"><tspan x=\"10\" dy=\"0\">Pike is telling us: Concurrency is one person brewing</tspan><tspan x=\"10\" dy=\"16\">ten cups of tea at once, parallelism is ten people</tspan><tspan x=\"10\" dy=\"16\">brewing tea together. Concurrency is one chef bustling</tspan><tspan x=\"10\" dy=\"16\">in a kitchen, parallelism is ten kitchens operating</tspan><tspan x=\"10\" dy=\"16\">simultaneously. Concurrency is your brain thinking about</tspan><tspan x=\"10\" dy=\"16\">dinner while contemplating life; parallelism is growing</tspan><tspan x=\"10\" dy=\"16\">a second brain. Concurrency is the art of efficiency,</tspan><tspan x=\"10\" dy=\"16\">parallelism is the luxury of resources.</tspan></text><text x=\"10\" y=\"350\" class=\"code\"><tspan x=\"10\" dy=\"0\">func 煮饭() {</tspan><tspan x=\"30\" dy=\"16\">go 洗米()</tspan><tspan x=\"30\" dy=\"16\">go 切菜()</tspan><tspan x=\"30\" dy=\"16\">go 烧水()</tspan><tspan x=\"30\" dy=\"16\">// 并发：一个厨师，多个任务</tspan><tspan x=\"30\" dy=\"16\">煮饭完成 := make(chan bool)</tspan><tspan x=\"30\" dy=\"16\">go func() {</tspan><tspan x=\"50\" dy=\"16\">米饭 := &lt;-淘米完成</tspan><tspan x=\"50\" dy=\"16\">菜 := &lt;-切菜完成</tspan><tspan x=\"50\" dy=\"16\">水 := &lt;-烧水完成</tspan><tspan x=\"50\" dy=\"16\">煮饭完成 &lt;- true</tspan><tspan x=\"30\" dy=\"16\">}()</tspan><tspan x=\"30\" dy=\"16\">&lt;-煮饭完成</tspan><tspan x=\"10\" dy=\"16\">}</tspan><tspan x=\"10\" dy=\"16\">// 并行：需要多个厨房或多个厨师</tspan></text><text x=\"10\" y=\"540\" class=\"text\"><tspan x=\"10\" dy=\"0\">结论：并发是聪明地工作，并行是豪华地工作。</tspan><tspan x=\"10\" dy=\"20\">Conclusion: Concurrency is working smart,</tspan><tspan x=\"10\" dy=\"20\">parallelism is working luxuriously.</tspan></text><path class=\"circuit\" d=\"M5,5 L395,5 L395,595 L5,595 L5,5 M200,5 L200,595 M5,300 L395,300\"/></svg>"
+    },
+    {
+        "english": "Channels orchestrate; mutexes serialize.",
+        "chinese": "通道用于协调；互斥锁用于串行化。",
+        "category": "Concurrency",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb guides the use of Go's concurrency primitives. Channels are best used for coordinating and communicating between goroutines, allowing for elegant concurrent designs. Mutexes, on the other hand, are used to serialize access to shared resources, ensuring that only one goroutine can access a critical section at a time. Understanding this distinction helps in designing cleaner and more efficient concurrent Go programs.",
+            "zh": "这个谚语指导了 Go 并发原语的使用。通道最适合用于协调 goroutine 之间的通信，允许优雅的并发设计。而互斥锁则用于串行化对共享资源的访问，确保在同一时间只有一个 goroutine 可以访问临界区。理解这种区别有助于设计更清晰、更高效的并发 Go 程序。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"><style>.background{fill:#1e1e1e;}.title{font-family:'Courier New',monospace;font-size:22px;fill:#61dafb;}.subtitle{font-family:'Courier New',monospace;font-size:12px;fill:#bb86fc;}.text{font-family:Arial,sans-serif;font-size:12px;fill:#ffffff;}.code{font-family:'Courier New',monospace;font-size:11px;fill:#ff7b72;}.circuit{stroke:#6e6e6e;fill:none;}</style><rect class=\"background\" width=\"400\" height=\"600\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" class=\"title\">编程语言新解</text><line x1=\"10\" y1=\"45\" x2=\"390\" y2=\"45\" stroke=\"#6e6e6e\"/><text x=\"10\" y=\"65\" class=\"subtitle\"><tspan x=\"10\" dy=\"0\">\"通道用于协调；互斥锁用于串行化。\"</tspan><tspan x=\"10\" dy=\"16\">\"Channels orchestrate; mutexes serialize.\"</tspan><tspan x=\"10\" dy=\"16\">— Rob Pike / 罗布·派克</tspan></text><text x=\"10\" y=\"140\" class=\"text\"><tspan x=\"10\" dy=\"0\">派克在告诉我们：通道就像交响乐团的指挥，</tspan><tspan x=\"10\" dy=\"16\">协调各个乐器的演奏；而互斥锁则像是独角戏的</tspan><tspan x=\"10\" dy=\"16\">演员，确保舞台上一次只有一个人表演。通道是</tspan><tspan x=\"10\" dy=\"16\">外交官，在各国之间传递信息；互斥锁是严格的</tspan><tspan x=\"10\" dy=\"16\">门卫，确保VIP室一次只能进一个人。通道组织</tspan><tspan x=\"10\" dy=\"16\">party，互斥锁管理排队上厕所。</tspan></text><text x=\"10\" y=\"240\" class=\"text\"><tspan x=\"10\" dy=\"0\">Pike is telling us: Channels are like orchestra</tspan><tspan x=\"10\" dy=\"16\">conductors, coordinating various instruments;</tspan><tspan x=\"10\" dy=\"16\">mutexes are like solo performers, ensuring only</tspan><tspan x=\"10\" dy=\"16\">one act on stage at a time. Channels are diplomats,</tspan><tspan x=\"10\" dy=\"16\">passing messages between nations; mutexes are</tspan><tspan x=\"10\" dy=\"16\">strict bouncers, ensuring only one VIP enters at</tspan><tspan x=\"10\" dy=\"16\">a time. Channels organize the party; mutexes</tspan><tspan x=\"10\" dy=\"16\">manage the bathroom queue.</tspan></text><text x=\"10\" y=\"350\" class=\"code\"><tspan x=\"10\" dy=\"0\">func 城市生活() {</tspan><tspan x=\"30\" dy=\"16\">// 通道：协调多个goroutine</tspan><tspan x=\"30\" dy=\"16\">公交站 := make(chan 乘客, 10)</tspan><tspan x=\"30\" dy=\"16\">go 候车(公交站)</tspan><tspan x=\"30\" dy=\"16\">go 开车(公交站)</tspan><tspan x=\"30\" dy=\"16\"></tspan><tspan x=\"30\" dy=\"16\">// 互斥锁：保护共享资源</tspan><tspan x=\"30\" dy=\"16\">var 公厕 sync.Mutex</tspan><tspan x=\"30\" dy=\"16\">go func() {</tspan><tspan x=\"50\" dy=\"16\">公厕.Lock()</tspan><tspan x=\"50\" dy=\"16\">上厕所()</tspan><tspan x=\"50\" dy=\"16\">公厕.Unlock()</tspan><tspan x=\"30\" dy=\"16\">}()</tspan><tspan x=\"10\" dy=\"16\">}</tspan></text><text x=\"10\" y=\"540\" class=\"text\"><tspan x=\"10\" dy=\"0\">结论：通道让goroutines一起跳舞，</tspan><tspan x=\"10\" dy=\"16\">互斥锁让它们排队上厕所。</tspan><tspan x=\"10\" dy=\"20\">Conclusion: Channels make goroutines dance together;</tspan><tspan x=\"10\" dy=\"16\">mutexes make them queue for the bathroom.</tspan></text><path class=\"circuit\" d=\"M5,5 L395,5 L395,595 L5,595 L5,5 M200,5 L200,595 M5,300 L395,300\"/></svg>"
+    },
+    {
+        "english": "The bigger the interface, the weaker the abstraction.",
+        "chinese": "接口越大，抽象越弱。",
+        "category": "Interface Design",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb emphasizes the importance of small, focused interfaces in Go. Large interfaces with many methods are less flexible and harder to implement, reducing their reusability. Small interfaces, often with just one or two methods, provide stronger abstractions as they can be easily implemented by many types. This approach promotes composition over inheritance and leads to more modular, maintainable code.",
+            "zh": "这句谚语强调了在 Go 中小型、专注接口的重要性。具有许多方法的大型接口不够灵活，更难实现，降低了它们的可重用性。小型接口（通常只有一两个方法）提供了更强的抽象，因为它们可以被许多类型轻松实现。这种方法提倡组合而非继承，导致更模块化、可维护的代码。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"><style>.background{fill:#1e1e1e;}.title{font-family:'Courier New',monospace;font-size:22px;fill:#61dafb;}.subtitle{font-family:'Courier New',monospace;font-size:12px;fill:#bb86fc;}.text{font-family:Arial,sans-serif;font-size:12px;fill:#ffffff;}.code{font-family:'Courier New',monospace;font-size:11px;fill:#ff7b72;}.circuit{stroke:#6e6e6e;fill:none;}</style><rect class=\"background\" width=\"400\" height=\"600\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" class=\"title\">编程语言新解</text><line x1=\"10\" y1=\"45\" x2=\"390\" y2=\"45\" stroke=\"#6e6e6e\"/><text x=\"10\" y=\"65\" class=\"subtitle\"><tspan x=\"10\" dy=\"0\">\"接口越大，抽象越弱。\"</tspan><tspan x=\"10\" dy=\"16\">\"The bigger the interface, the weaker the abstraction.\"</tspan><tspan x=\"10\" dy=\"16\">— Rob Pike / 罗布·派克</tspan></text><text x=\"10\" y=\"140\" class=\"text\"><tspan x=\"10\" dy=\"0\">派克在告诉我们：接口就像是瑞士军刀，功能越多，</tspan><tspan x=\"10\" dy=\"16\">反而越难用。想象一下，如果你的遥控器上有100个</tspan><tspan x=\"10\" dy=\"16\">按钮，你还能轻松地打开电视吗？大接口就像是一个</tspan><tspan x=\"10\" dy=\"16\">喋喋不休的人，说了太多反而什么都没说清楚。好的</tspan><tspan x=\"10\" dy=\"16\">接口应该像李小龙的\"一寸长一寸强\"，精准而有力。</tspan><tspan x=\"10\" dy=\"16\">记住，在软件设计中，少即是多，简约才是终极复杂。</tspan></text><text x=\"10\" y=\"240\" class=\"text\"><tspan x=\"10\" dy=\"0\">Pike is telling us: Interfaces are like Swiss Army knives;</tspan><tspan x=\"10\" dy=\"16\">the more functions, the harder to use. Imagine a remote</tspan><tspan x=\"10\" dy=\"16\">with 100 buttons - could you easily turn on the TV? Big</tspan><tspan x=\"10\" dy=\"16\">interfaces are like verbose people, saying so much that</tspan><tspan x=\"10\" dy=\"16\">nothing is clear. Good interfaces should be like Bruce</tspan><tspan x=\"10\" dy=\"16\">Lee's \"one-inch punch\" - precise and powerful. Remember,</tspan><tspan x=\"10\" dy=\"16\">in software design, less is more, and simplicity is the</tspan><tspan x=\"10\" dy=\"16\">ultimate sophistication.</tspan></text><text x=\"10\" y=\"350\" class=\"code\"><tspan x=\"10\" dy=\"0\">// 过于复杂的接口</tspan><tspan x=\"10\" dy=\"16\">type 瑞士军刀 interface {</tspan><tspan x=\"30\" dy=\"16\">切割()</tspan><tspan x=\"30\" dy=\"16\">开瓶()</tspan><tspan x=\"30\" dy=\"16\">拧螺丝()</tspan><tspan x=\"30\" dy=\"16\">锉指甲()</tspan><tspan x=\"30\" dy=\"16\">充当手电筒()</tspan><tspan x=\"30\" dy=\"16\">// ... 还有95个其他方法</tspan><tspan x=\"10\" dy=\"16\">}</tspan><tspan x=\"10\" dy=\"16\"></tspan><tspan x=\"10\" dy=\"16\">// 简洁而强大的接口</tspan><tspan x=\"10\" dy=\"16\">type 切割器 interface {</tspan><tspan x=\"30\" dy=\"16\">切割()</tspan><tspan x=\"10\" dy=\"16\">}</tspan></text><text x=\"10\" y=\"540\" class=\"text\"><tspan x=\"10\" dy=\"0\">结论：优秀的接口就像优秀的演讲，</tspan><tspan x=\"10\" dy=\"16\">不在于说了多少，而在于省略了多少。</tspan><tspan x=\"10\" dy=\"20\">Conclusion: A great interface, like a great speech,</tspan><tspan x=\"10\" dy=\"16\">is about what's left out, not what's put in.</tspan></text><path class=\"circuit\" d=\"M5,5 L395,5 L395,595 L5,595 L5,5 M200,5 L200,595 M5,300 L395,300\"/></svg>"
+    },
+    {
+        "english": "Make the zero value useful.",
+        "chinese": "让零值有意义。",
+        "category": "Design Principles",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb encourages designing types in Go so that their zero values (the default values when a variable is declared but not initialized) are meaningful and useful. This practice can simplify code by reducing the need for explicit initialization, make APIs more user-friendly, and help prevent certain classes of bugs. For example, an empty slice (nil) is ready to use with append, demonstrating a useful zero value.",
+            "zh": "这个谚语鼓励在 Go 中设计类型时，使它们的零值（变量声明但未初始化时的默认值）有意义且有用。这种做法可以通过减少显式初始化的需求来简化代码，使 API 更加用户友好，并有助于防止某些类型的错误。例如，一个空切片（nil）可以直接用于 append，展示了有用的零值。"
+        }
+    },
+    {
+        "english": "interface{} says nothing.",
+        "chinese": "interface{} 什么都不说明",
+        "category": "Interface Design",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb cautions against overuse of the empty interface (interface{}). While interface{} can hold values of any type, it provides no information about what operations can be performed on that value. Overusing interface{} can lead to type-unsafe code, runtime errors, and reduced code clarity. Instead, Go encourages using specific interfaces that describe the behavior you need, promoting type safety and clear API design.",
+            "zh": "这句谚语警告不要过度使用空接口（interface{}）。虽然 interface{} 可以容纳任何类型的值，但它没有提供关于可以对该值执行哪些操作的信息。过度使用 interface{} 可能导致类型不安全的代码、运行时错误和降低代码清晰度。相反，Go 鼓励使用描述你需要的行为的特定接口，促进类型安全和清晰的 API 设计。"
+        }
+    },
+    {
+        "english": "Gofmt's style is no one's favorite, yet gofmt is everyone's favorite.",
+        "chinese": "Gofmt的风格不是任何人的最爱，但Gofmt是每个人的最爱。",
+        "category": "Code Style",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb highlights the importance of consistent code formatting in Go. While the specific style choices made by gofmt (Go's official code formatter) might not be everyone's personal preference, the tool itself is universally appreciated. By automatically formatting code to a standard style, gofmt eliminates debates over formatting, makes code more readable across projects, and allows developers to focus on code functionality rather than style minutiae.",
+            "zh": "这个谚语强调了 Go 中一致代码格式的重要性。虽然 gofmt（Go 官方代码格式化工具）做出的具体风格选择可能不是每个人的个人偏好，但这个工具本身得到了普遍的赞赏。通过自动将代码格式化为标准样式，gofmt 消除了关于格式的争论，使跨项目的代码更易读，并允许开发人员专注于代码功能而不是风格细节。"
+        }
+    },
+    {
+        "english": "A little copying is better than a little dependency.",
+        "chinese": "少量复制优于少量依赖。",
+        "category": "Code Organization",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb suggests that sometimes, copying a small amount of code is preferable to introducing a new dependency. While code reuse is generally good, adding dependencies for minor functionalities can increase complexity, potential for conflicts, and maintenance burden. This principle encourages developers to carefully consider the trade-offs between code duplication and dependency management, especially for small, stable pieces of functionality.",
+            "zh": "这句谚语建议，有时复制少量代码比引入新的依赖更可取。虽然代码重用通常是好的，但为了小功能添加依赖可能会增加复杂性、潜在冲突和维护负担。这个原则鼓励开发者仔细考虑代码重复和依赖管理之间的权衡，特别是对于小型、稳定的功能。"
+        }
+    },
+    {
+        "english": "Syscall must always be guarded with build tags.",
+        "chinese": "Syscall 必须始终用构建标签保护。",
+        "category": "System Programming",
+        "author": "Unknown",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb emphasizes the importance of using build tags when working with system calls in Go. Since system calls can be platform-specific, using build tags ensures that the right code is compiled for the target operating system. This practice improves code portability and prevents compilation errors or runtime issues on unsupported platforms. It's a crucial consideration for developers working on cross-platform Go applications.",
+            "zh": "这个谚语强调了在 Go 中使用系统调用时使用构建标签的重要性。由于系统调用可能是特定于平台的，使用构建标签可以确保为目标操作系统编译正确的代码。这种做法提高了代码的可移植性，并防止了在不支持的平台上出现编译错误或运行时问题。这对于开发跨平台 Go 应用的开发者来说是一个重要的考虑因素。"
+        }
+    },
+    {
+        "english": "Cgo must always be guarded with build tags.",
+        "chinese": "Cgo必须始终用构建标签保护。",
+        "category": "System Programming",
+        "author": "Unknown",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "Similar to the syscall proverb, this emphasizes the need to use build tags when working with Cgo (Go's foreign function interface for calling C code). Cgo dependencies can be platform-specific and may not be available on all systems. Using build tags ensures that Cgo code is only compiled on supported platforms, maintaining the portability and reliability of Go programs across different environments.",
+            "zh": "类似于 syscall 的谚语，这强调了在使用 Cgo（Go 用于调用 C 代码的外部函数接口）时使用构建标签的必要性。Cgo 依赖可能是特定于平台的，并且可能不是在所有系统上都可用。使用构建标签确保 Cgo 代码只在支持的平台上编译，维护了 Go 程序在不同环境中的可移植性和可靠性。"
+        }
+    },
+    {
+        "english": "Cgo is not Go.",
+        "chinese": "Cgo不是Go。",
+        "category": "Language Purity",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb cautions against overreliance on Cgo, which allows Go programs to call C code. While Cgo is powerful and necessary for certain tasks, it introduces complexity, potential performance overhead, and can make code less portable. The proverb reminds developers that pure Go solutions should be preferred when possible, as they maintain the simplicity, safety, and cross-platform benefits of Go. Use Cgo judiciously, only when absolutely necessary.",
+            "zh": "这句谚语警告不要过度依赖 Cgo，它允许 Go 程序调用 C 代码。虽然 Cgo 强大且对某些任务是必要的，但它引入了复杂性、潜在的性能开销，并可能使代码可移植性降低。这个谚语提醒开发者，应该在可能的情况下首选纯 Go 解决方案，因为它们保持了 Go 的简单性、安全性和跨平台优势。只在绝对必要时谨慎使用 Cgo。"
+        }
+    },
+    {
+        "english": "With the unsafe package there are no guarantees.",
+        "chinese": "使用 unsafe 包就没有保证。",
+        "category": "Safety",
+        "author": "Unknown",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb warns about the risks of using Go's unsafe package. While unsafe provides powerful low-level programming capabilities, it bypasses Go's type system and memory safety guarantees. Using unsafe can lead to undefined behavior, memory corruption, and hard-to-debug issues. The proverb reminds developers that when using unsafe, they take full responsibility for ensuring the correctness and safety of their code.",
+            "zh": "这个谚语警告使用 Go 的 unsafe 包的风险。虽然 unsafe 提供了强大的低级编程能力，但它绕过了 Go 的类型系统和内存安全保证。使用 unsafe 可能导致未定义行为、内存损坏和难以调试的问题。这个谚语提醒开发者，在使用 unsafe 时，他们需要完全负责确保代码的正确性和安全性。"
+        }
+    },
+    {
+        "english": "Clear is better than clever.",
+        "chinese": "清晰胜于聪明。",
+        "category": "Code Style",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb emphasizes the importance of writing clear, straightforward code over clever or overly complex solutions. In Go, simplicity and readability are highly valued. Clear code is easier to understand, maintain, and debug, which is crucial for long-term project health. The proverb encourages developers to prioritize clarity and simplicity in their code, even if it means writing a few more lines or avoiding 'clever' tricks.",
+            "zh": "这句谚语强调了编写清晰、直接的代码比聪明或过于复杂的解决方案更重要。在 Go 中，简单性和可读性是非常重要的。清晰的代码更容易理解、维护和调试，这对于项目的长期健康至关重要。这个谚语鼓励开发者在代码中优先考虑清晰度和简单性，即使这意味着多写几行代码或避免使用'聪明'的技巧。"
+        }
+    },
+    {
+        "english": "Reflection is never clear.",
+        "chinese": "反射永远不够清晰。",
+        "category": "Language Features",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb cautions against overuse of reflection in Go. While reflection is a powerful feature that allows programs to examine, modify, and create types at runtime, it often leads to code that is hard to understand and maintain. Reflection can also impact performance and make code less type-safe. The proverb suggests that developers should prefer clear, statically typed code whenever possible, and use reflection judiciously only when absolutely necessary.",
+            "zh": "这个谚语警告不要过度使用 Go 中的反射。虽然反射是一个强大的特性，允许程序在运行时检查、修改和创建类型，但它经常导致难以理解和维护的代码。反射还可能影响性能并使代码的类型安全性降低。这个谚语建议开发者应尽可能优先使用清晰的、静态类型的代码，只在绝对必要时谨慎使用反射。"
+        }
+    },
+    {
+        "english": "Errors are values.",
+        "chinese": "错误也是值。",
+        "category": "Error Handling",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb highlights Go's approach to error handling. In Go, errors are not exceptions but regular values that can be programmed with. This approach encourages explicit error checking and handling, making error flows clear and controllable. It allows for more robust error handling strategies, such as wrapping errors with additional context, creating custom error types, or implementing error interfaces. This philosophy contributes to Go's emphasis on clear and predictable code behavior.",
+            "zh": "这句谚语强调了 Go 处理错误的方法。在 Go 中，错误不是异常，而是可以编程的常规值。这种方法鼓励显式的错误检查和处理，使错误流程清晰可控。它允许更健壮的错误处理策略，如用额外上下文包装错误、创建自定义错误类型或实现错误接口。这种理念有助于 Go 强调清晰和可预测的代码行为。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"><style>    .background { fill: #1e1e1e; }    .title { font-family: 'Courier New', monospace; font-size: 22px; fill: #61dafb; }    .subtitle { font-family: 'Courier New', monospace; font-size: 12px; fill: #bb86fc; }    .text { font-family: Arial, sans-serif; font-size: 12px; fill: #ffffff; }    .code { font-family: 'Courier New', monospace; font-size: 11px; fill: #ff7b72; }    .circuit { stroke: #6e6e6e; fill: none; }  </style><rect class=\"background\" width=\"400\" height=\"600\" /><text x=\"200\" y=\"30\" text-anchor=\"middle\" class=\"title\">箴言新解</text><line x1=\"10\" y1=\"45\" x2=\"390\" y2=\"45\" stroke=\"#6e6e6e\" /><text x=\"10\" y=\"65\" class=\"subtitle\"><tspan x=\"10\" dy=\"0\">\"Errors 也是值。\"</tspan><tspan x=\"10\" dy=\"16\">\"Errors are values.\"</tspan><tspan x=\"10\" dy=\"16\">— Russ Cox / 拉斯·考克斯</tspan></text><text x=\"10\" y=\"140\" class=\"text\"><tspan x=\"10\" dy=\"0\">想象一下，如果生活中的错误都是可以兑换的优惠券。</tspan><tspan x=\"10\" dy=\"16\">考克斯告诉我们：别把 bug 当垃圾扔掉，把它们当作</tspan><tspan x=\"10\" dy=\"16\">宝贵的经验值！这就是编程界的炼金术：把 Exception </tspan><tspan x=\"10\" dy=\"16\">变成 Lesson，把 Crash 变成 Cash。每次程序崩溃，</tspan><tspan x=\"10\" dy=\"16\">都是你在\"错误银行\"存了一笔巨款。</tspan></text><text x=\"10\" y=\"240\" class=\"text\"><tspan x=\"10\" dy=\"0\">Imagine if life's mistakes were redeemable coupons. Cox is</tspan><tspan x=\"10\" dy=\"16\">telling us: don't throw away bugs like trash, treat them as</tspan><tspan x=\"10\" dy=\"16\">precious experience points! This is programming alchemy:</tspan><tspan x=\"10\" dy=\"16\">turning Exceptions into Lessons, Crashes into Cash. Every</tspan><tspan x=\"10\" dy=\"16\">time your program crashes, you've made a big deposit in</tspan><tspan x=\"10\" dy=\"16\">the \"Bank of Errors\".</tspan></text><text x=\"10\" y=\"350\" class=\"code\"><tspan x=\"10\" dy=\"0\">func 人生(经历 chan 事件) {</tspan><tspan x=\"30\" dy=\"16\">for {</tspan><tspan x=\"50\" dy=\"16\">select {</tspan><tspan x=\"50\" dy=\"16\">case 成功 := &lt;-经历:</tspan><tspan x=\"70\" dy=\"16\">庆祝(成功)</tspan><tspan x=\"50\" dy=\"16\">case 错误 := &lt;-经历:</tspan><tspan x=\"70\" dy=\"16\">经验值 := 学习(错误) // 错误变黄金</tspan><tspan x=\"70\" dy=\"16\">升级(经验值)</tspan><tspan x=\"50\" dy=\"16\">}</tspan><tspan x=\"30\" dy=\"16\">}</tspan><tspan x=\"10\" dy=\"16\">}</tspan></text><text x=\"10\" y=\"520\" class=\"text\"><tspan x=\"10\" dy=\"0\">结论：程序员不是在调试代码，而是在进行错误投资。</tspan><tspan x=\"10\" dy=\"20\">Conclusion: Programmers aren't debugging, they're</tspan><tspan x=\"10\" dy=\"20\">investing in their error portfolio.</tspan></text><path class=\"circuit\" d=\"M5,5 L395,5 L395,595 L5,595 L5,5 M200,5 L200,595 M5,300 L395,300\" /></svg>"
+    },
+    {
+        "english": "Don't just check errors, handle them gracefully.",
+        "chinese": "不要只是检查错误，要优雅地处理它们。",
+        "category": "Error Handling",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb emphasizes the importance of not just detecting errors, but dealing with them appropriately. In Go, it's common to see code that checks for errors but doesn't handle them well (e.g., just logging and continuing). The proverb encourages developers to think about how to respond to errors in a way that maintains the program's integrity and provides a good user experience. This might involve cleaning up resources, providing informative error messages, or gracefully degrading functionality.",
+            "zh": "这个谚语强调不仅要检测错误，还要适当地处理它们。在 Go 中，经常可以看到检查错误但没有很好处理的代码（例如，仅仅记录日志然后继续）。这个谚语鼓励开发者思考如何以维护程序完整性和提供良好用户体验的方式响应错误。这可能涉及清理资源、提供信息丰富的错误消息或优雅地降级功能。"
+        }
+    },
+    {
+        "english": "Design the architecture, name the components, document the details.",
+        "chinese": "设计架构，命名组件，记录细节。",
+        "category": "Software Design",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb outlines a systematic approach to software design in Go. It emphasizes the importance of thinking about the big picture (architecture) before diving into implementation details. Naming components clearly is crucial for code readability and maintenance. Finally, documenting the details ensures that the design decisions and important information are preserved. This approach promotes well-structured, understandable, and maintainable Go projects.",
+            "zh": "这句谚语概述了 Go 中软件设计的系统方法。它强调了在深入实现细节之前考虑大局（架构）的重要性。清晰地命名组件对于代码的可读性和可维护性至关重要。最后，记录细节确保设计决策和重要信息得以保存。这种方法促进了结构良好、易于理解和可维护的 Go 项目。"
+        }
+    },
+    {
+        "english": "Documentation is for users.",
+        "chinese": "文档是为用户准备的。",
+        "category": "Documentation",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb emphasizes that documentation should be written with the end user in mind, not just for the developer. In Go, this means writing clear, concise, and helpful package and function documentation. Good documentation should explain what a package or function does, provide examples of usage, and clarify any non-obvious behavior. This approach helps other developers (the users of your code) understand and use your code effectively, which is crucial in Go's philosophy of creating readable and maintainable software.",
+            "zh": "这个谚语强调文档应该以最终用户为中心编写，而不仅仅是为了开发者。在 Go 中，这意味着编写清晰、简洁和有帮助的包和函数文档。好的文档应该解释包或函数的功能，提供使用示例，并澄清任何不明显的行为。这种方法有助于其他开发者（你的代码的使用者）有效地理解和使用你的代码，这在 Go 创建可读和可维护软件的理念中是至关重要的。"
+        }
+    },
+    {
+        "english": "Don't panic.",
+        "chinese": "不要恐慌。",
+        "category": "Error Handling",
+        "author": "Rob Pike / 罗布·派克",
+        "source": "Go Proverbs (https://go-proverbs.github.io/)",
+        "interpretation":
+        {
+            "en": "This proverb advises against the overuse of Go's built-in panic function. In Go, panics are meant for unrecoverable errors, not for normal error handling. The proverb encourages developers to use error returns for expected error conditions and to reserve panics for truly exceptional situations. This approach leads to more predictable and manageable error handling, aligning with Go's philosophy of explicit error handling and program flow control.",
+            "zh": "这句谚语建议不要过度使用 Go 的内置 panic 函数。在 Go 中，panic 是为不可恢复的错误而设的，而不是用于正常的错误处理。这个谚语鼓励开发者对预期的错误条件使用错误返回，而将 panic 保留给真正的异常情况。这种方法导致更可预测和可管理的错误处理，符合 Go 显式错误处理和程序流程控制的理念。"
+        }
+    }
+]
