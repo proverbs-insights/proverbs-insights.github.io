@@ -1,4 +1,5 @@
 # proverbs-insights.github.io
+<img src="https://changkun.de/urlstat?mode=github&repo=proverbs-insights/proverbs-insights.github.io" align="right" style="margin: 5px; margin-bottom: 20px;" />
 
 This project was inspired by the following projects:
 
@@ -7,8 +8,17 @@ This project was inspired by the following projects:
 
 ## Go Proverbs Insights Samples
 
-![](/assets/images/Simple-Poetic-Pithy-Proverbs.png)
-![](/assets/images/Simple-Poetic-Pithy-Insight.png)
+<div style="display: flex;">
+
+  <div style="flex: 1; padding: 10px;">
+    <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Proverbs.png" alt="Samples 1" style="width: 100%;">
+  </div>
+
+  <div style="flex: 1; padding: 10px;">
+    <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Insight.png" alt="Samples 2" style="width: 100%;">
+  </div>
+
+</div>
 
 ## Python Proverbs Insights (TODO)
 
