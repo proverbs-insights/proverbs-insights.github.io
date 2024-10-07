@@ -33,6 +33,32 @@ h1 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
+.quote-card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-left {
+    transform: translateX(-100%);
+}
+
+.slide-right {
+    transform: translateX(100%);
+}
 .quote-chinese {
     font-family: 'Ma Shan Zheng', cursive;
     font-size: 24px;
