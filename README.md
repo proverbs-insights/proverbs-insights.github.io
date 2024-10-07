@@ -6,7 +6,7 @@ This project was inspired by the following projects:
 - https://go-proverbs.github.io
 - [Rob Pike's talk](https://www.youtube.com/watch?v=PAAkCSZUG1c)
 
-## Go Proverbs Insights Samples
+## [Go Proverbs Insights](https://proverbs-insights.github.io/languages/go/) Samples
 
 <table>
   <tr>
