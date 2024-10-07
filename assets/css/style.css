@@ -10,6 +10,10 @@ body {
     justify-content: center;
 }
 
+:root {
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -41,6 +45,7 @@ h1 {
 .quote-card-container {
     position: relative;
     overflow: hidden;
+    margin: 0;
 }
 
 .quote-card {
@@ -73,6 +78,7 @@ h1 {
 }
 
 .quote-source {
+    display: block;
     text-align: right;
     color: #6b7280;
     font-size: 0.8em;
