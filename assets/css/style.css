@@ -34,13 +34,6 @@ h1 {
     font-size: 36px;
 }
 
-.quote-card {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
 
 .quote-card-container {
     position: relative;
@@ -49,6 +42,11 @@ h1 {
 }
 
 .quote-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -244,5 +242,4 @@ h1 {
     .slide-right {
         transform: translateX(100%);
     }
-
 }

@@ -54,8 +54,6 @@ fetch('/languages/go/proverbs.json')
         newQuoteCard.style.left = '100%';
        }
 
-
-   
        // Add the new card to the container
        container.appendChild(newQuoteCard);
 
@@ -63,16 +61,11 @@ fetch('/languages/go/proverbs.json')
        // Trigger reflow
        void newQuoteCard.offsetWidth;
    
-       // Start the animation
-       oldQuoteCard.style.transition = 'transform 0.3s ease-out';
-       newQuoteCard.style.transition = 'transform 0.3s ease-out';
    
        if (direction === 'next') {
-           oldQuoteCard.style.transform = 'translateX(100%)';
-           newQuoteCard.style.transform = 'translateX(0)';
+           oldQuoteCard.classList.add('slide-right');
        } else {
-           oldQuoteCard.style.transform = 'translateX(-100%)';
-           newQuoteCard.style.transform = 'translateX(0)';
+           oldQuoteCard.classList.add('slide-left');
        }
    
        // After animation, clean up
@@ -85,15 +78,17 @@ fetch('/languages/go/proverbs.json')
            newQuoteCard.style.width = '';
            newQuoteCard.style.transform = '';
            isAnimating = false;
+            
+           // Update interpretation and SVG
+            quoteInterpretation.innerHTML = `
+            <div class="interpretation-title">箴言新解 / Proverbs Insights:</div>
+            <p class="interpretation-chinese">${quote.interpretation.zh || 'TODO'}</p>
+            <p class="interpretation-english">${quote.interpretation.en || 'TODO'}</p>
+            `;
+            svgContainer.innerHTML = quote.svg || '';
        }, 300);
    
-       // Update interpretation and SVG
-       quoteInterpretation.innerHTML = `
-           <div class="interpretation-title">箴言新解 / Proverbs Insights:</div>
-           <p class="interpretation-chinese">${quote.interpretation.zh || 'TODO'}</p>
-           <p class="interpretation-english">${quote.interpretation.en || 'TODO'}</p>
-       `;
-       svgContainer.innerHTML = quote.svg || '';
+
    }
    
 
