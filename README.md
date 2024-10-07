@@ -11,10 +11,10 @@ This project was inspired by the following projects:
 <table>
   <tr>
     <td>
-      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Proverbs.png" alt="Samples 1" style="width: 50%;">
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Proverbs.png" alt="Samples 1" style="width: 100%;">
     </td>
     <td>
-      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Insight.png" alt="Samples 2" style="width: 50%;">
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Insight.png" alt="Samples 2" style="width: 100%;">
     </td>
   </tr>
 </table>
