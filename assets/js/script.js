@@ -27,53 +27,70 @@ fetch('/languages/go/proverbs.json')
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
-    function createQuoteCard(quote, direction = 'next') {
-        if (isAnimating) return;
-    isAnimating = true;
+ 
 
-        const quoteCard = document.getElementById('quoteCard');
-        const newQuoteCard = document.createElement('div');
-        newQuoteCard.className = 'quote-card';
-        newQuoteCard.innerHTML = `
-            <div class="quote-chinese">${quote.chinese}</div>
-            <div class="quote-english">${quote.english}</div>
-            ${quote.author ? `<div class="quote-author">— ${quote.author}</div>` : ''}
-            ${quote.source ? `<div class="quote-source">出处 / Source: ${formatSource(quote.source)}</div>` : ''}
-        `;
-    
-        // 设置新卡片的初始位置
-        newQuoteCard.classList.add(direction === 'next' ? 'slide-right' : 'slide-left');
-    
-        // 添加新卡片到容器
-        const container = document.getElementById('quoteCardContainer');
-        container.appendChild(newQuoteCard);
-    
-        // 触发重排
-        void newQuoteCard.offsetWidth;
-    
-        // 开始动画
-        quoteCard.classList.add('fade-out');
-        quoteCard.classList.add(direction === 'next' ? 'slide-left' : 'slide-right');
-        newQuoteCard.classList.add('fade-in');
-        newQuoteCard.classList.remove('slide-right', 'slide-left');
-    
-        // 动画结束后移除旧卡片
-        setTimeout(() => {
-            if (container.contains(quoteCard)) {
-                container.removeChild(quoteCard);
-            }
-            newQuoteCard.id = 'quoteCard';
-            isAnimating = false;
-        }, 300);
-    
-        // 更新解释和SVG
-        quoteInterpretation.innerHTML = `
+   function createQuoteCard(quote, direction = 'next') {
+       if (isAnimating) return;
+       isAnimating = true;
+   
+       const container = document.getElementById('quoteCardContainer');
+       const oldQuoteCard = document.getElementById('quoteCard');
+       const newQuoteCard = document.createElement('div');
+       newQuoteCard.className = 'quote-card';
+       newQuoteCard.innerHTML = `
+           <div class="quote-chinese">${quote.chinese}</div>
+           <div class="quote-english">${quote.english}</div>
+           ${quote.author ? `<div class="quote-author">— ${quote.author}</div>` : ''}
+           ${quote.source ? `<div class="quote-source">出处 / Source: ${formatSource(quote.source)}</div>` : ''}
+       `;
+   
+       // Set initial positions
+       newQuoteCard.style.position = 'absolute';
+       newQuoteCard.style.top = '0';
+       newQuoteCard.style.width = '100%';
+       if (direction === 'next') {
+        newQuoteCard.style.right = '100%';
+       } else {
+        newQuoteCard.style.left = '100%';
+       }
+
+       // Add the new card to the container
+       container.appendChild(newQuoteCard);
+
+   
+       // Trigger reflow
+       void newQuoteCard.offsetWidth;
+   
+   
+       if (direction === 'next') {
+           oldQuoteCard.classList.add('slide-right');
+       } else {
+           oldQuoteCard.classList.add('slide-left');
+       }
+   
+       // After animation, clean up
+       setTimeout(() => {
+           container.removeChild(oldQuoteCard);
+           newQuoteCard.id = 'quoteCard';
+           newQuoteCard.style.position = '';
+           newQuoteCard.style.top = '';
+           newQuoteCard.style.left = '';
+           newQuoteCard.style.width = '';
+           newQuoteCard.style.transform = '';
+           isAnimating = false;
+            
+           // Update interpretation and SVG
+            quoteInterpretation.innerHTML = `
             <div class="interpretation-title">箴言新解 / Proverbs Insights:</div>
             <p class="interpretation-chinese">${quote.interpretation.zh || 'TODO'}</p>
             <p class="interpretation-english">${quote.interpretation.en || 'TODO'}</p>
-        `;
-        svgContainer.innerHTML = quote.svg || '';
-    }
+            `;
+            svgContainer.innerHTML = quote.svg || '';
+       }, 300);
+   
+
+   }
+   
 
     function formatSource(source) {
         // 匹配文本中括号内的URL

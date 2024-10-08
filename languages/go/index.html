@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,87 +53,113 @@
             transform-origin: 0 0;
         }
 
-        .book .book__page:nth-child(1) {
-            animation: page-1 var(--duration) linear infinite;
+        .main-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .book .book__page:nth-child(2) {
-            animation: page-2 var(--duration) linear infinite;
+        @media (prefers-reduced-motion: no-preference) {
+            .book .book__page:nth-child(1) {
+                animation: page-1 var(--duration) linear infinite;
+            }
+
+            .book .book__page:nth-child(2) {
+                animation: page-2 var(--duration) linear infinite;
+            }
+
+            .book .book__page:nth-child(3) {
+                animation: page-3 var(--duration) linear infinite;
+            }
+
+            @keyframes page-1 {
+                4% {
+                    transform: rotateZ(0);
+                }
+
+                13%,
+                54% {
+                    transform: rotateZ(180deg);
+                }
+
+                63%,
+                100% {
+                    transform: rotateZ(0deg);
+                }
+            }
+
+            @keyframes page-2 {
+                4% {
+                    transform: rotateZ(0);
+                }
+
+                13% {
+                    transform: rotateZ(180deg);
+                }
+
+                23% {
+                    transform: rotateZ(0);
+                }
+
+                54% {
+                    transform: rotateZ(180deg);
+                }
+
+                63% {
+                    transform: rotateZ(0);
+                }
+            }
+
+            @keyframes page-3 {
+                4% {
+                    transform: rotateZ(0);
+                }
+
+                13% {
+                    transform: rotateZ(180deg);
+                }
+
+                23% {
+                    transform: rotateZ(0deg);
+                }
+
+                31% {
+                    transform: rotateZ(180deg);
+                }
+
+                41% {
+                    transform: rotateZ(0deg);
+                }
+
+                54% {
+                    transform: rotateZ(180deg);
+                }
+
+                63% {
+                    transform: rotateZ(0);
+                }
+            }
         }
 
-        .book .book__page:nth-child(3) {
-            animation: page-3 var(--duration) linear infinite;
-        }
-
-        @keyframes page-1 {
-            4% {
-                transform: rotateZ(0);
-            }
-            13%,
-            54% {
-                transform: rotateZ(180deg);
-            }
-            63%,
-            100% {
-                transform: rotateZ(0deg);
-            }
-        }
-
-        @keyframes page-2 {
-            4% {
-                transform: rotateZ(0);
-            }
-            13% {
-                transform: rotateZ(180deg);
-            }
-            23% {
-                transform: rotateZ(0);
-            }
-            54% {
-                transform: rotateZ(180deg);
-            }
-            63% {
-                transform: rotateZ(0);
-            }
-        }
-
-        @keyframes page-3 {
-            4% {
-                transform: rotateZ(0);
-            }
-            13% {
-                transform: rotateZ(180deg);
-            }
-            23% {
-                transform: rotateZ(0deg);
-            }
-            31% {
-                transform: rotateZ(180deg);
-            }
-            41% {
-                transform: rotateZ(0deg);
-            }
-            54% {
-                transform: rotateZ(180deg);
-            }
-            63% {
-                transform: rotateZ(0);
+        @media (prefers-reduced-motion: reduce) {
+            .book .book__page {
+                animation: none;
             }
         }
     </style>
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const loadingScreen = document.getElementById('loading-screen');
             const mainContent = document.getElementById('main-content');
 
             // 资源加载
-            window.addEventListener('load', function() {
+            window.addEventListener('load', function () {
                 // 确保至少显示加载动画 1 秒，以防资源加载太快
-                setTimeout(function() {
+                setTimeout(function () {
                     loadingScreen.style.opacity = '0';
                     loadingScreen.style.transition = 'opacity 0.5s ease-out';
-                    
-                    setTimeout(function() {
+
+                    setTimeout(function () {
                         loadingScreen.style.display = 'none';
                         mainContent.style.display = 'block';
                     }, 500);
@@ -141,6 +168,7 @@
         });
     </script>
 </head>
+
 <body>
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
@@ -152,27 +180,37 @@
             <p>Loading...</p>
         </div>
     </div>
-    <div id="main-content" class="container" style="display: none;">
-        <h1>Go 语言箴言新解</h1>
-        <h1>Go Proverbs Insights</h1>
-        <div id="quoteCardContainer" class="quote-card-container">
-            <div id="quoteCard" class="quote-card fade-in"></div>
-        </div>
+    <main id="main-content" class="container" style="display: none;">
+        <h1 class="main-heading">
+            <span class="main-title" lang="zh">Go 语言箴言新解</span>
+            <span class="main-subtitle" lang="en">Go Proverbs Insights</span>
+        </h1>
+        <blockquote id="quoteCardContainer" class="quote-card-container">
+            <div id="quoteCard" class="quote-card fade-in">
+            </div>
+        </blockquote>
         <div id="interpretationContainer">
             <div id="quoteInterpretation" class="quote-interpretation"></div>
             <div id="svgContainer" class="svg-container"></div>
         </div>
-        <footer>
-            <p class="footer-text">Please read the <a href="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/master/CONTRIBUTING.md">contribution guidelines</a> before opening an <a href="https://github.com/proverbs-insights/proverbs-insights.github.io/issues/new">issue</a> to nominate a new proverb and insight. PV/UV: <span id="urlstat-page-pv"><!-- info will be inserted --></span>/<span id="urlstat-page-uv"><!-- info will be inserted --></p>
-            <p>&copy; 2024 TalkGo Technology</p>
-        </footer>
-    </div>
-    <canvas id="canvas" width="600" height="400"></canvas>
-    <div class="navigation">
-        <button id="prevButton" class="fixed-nav-button left">←</button>
-        <button id="nextButton" class="fixed-nav-button right">→</button>
-        <button id="backToTop" class="back-to-top">↑</button>
-    </div>
-    
+
+        <canvas id="canvas" width="600" height="400"></canvas>
+        <aside class="navigation">
+            <button id="prevButton" class="fixed-nav-button left" aria-label="Previous">←</button>
+            <button id="nextButton" class="fixed-nav-button right" aria-label="Next">→</button>
+            <button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+        </aside>
+    </main>
+    <footer>
+        <p class="footer-text">Please read the <a
+                href="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/master/CONTRIBUTING.md">contribution
+                guidelines</a> before opening an <a
+                href="https://github.com/proverbs-insights/proverbs-insights.github.io/issues/new">issue</a> to
+            nominate a new proverb and insight. PV/UV: <span
+                id="urlstat-page-pv"><!-- info will be inserted --></span>/<span
+                id="urlstat-page-uv"><!-- info will be inserted --></p>
+        <p>&copy; 2024 TalkGo Technology</p>
+    </footer>
 </body>
+
 </html>

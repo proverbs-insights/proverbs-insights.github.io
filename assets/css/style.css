@@ -9,16 +9,23 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+:root {
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
 }
+
 footer {
     padding: 20px;
     text-align: center;
     background-color: #f8f4e5;
     color: #666666;
 }
+
 h1 {
     text-align: center;
     color: #2d3748;
@@ -26,39 +33,24 @@ h1 {
     font-family: 'Ma Shan Zheng', cursive;
     font-size: 36px;
 }
+
+
+.quote-card-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
 .quote-card {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-}
-.quote-card-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.quote-card {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.fade-out {
-    opacity: 0;
-    transform: translateX(-100%);
-}
 
-.fade-in {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.slide-left {
-    transform: translateX(-100%);
-}
-
-.slide-right {
-    transform: translateX(100%);
-}
 .quote-chinese {
     font-family: 'Ma Shan Zheng', cursive;
     font-size: 24px;
@@ -66,6 +58,7 @@ h1 {
     margin-bottom: 12px;
     line-height: 1.4;
 }
+
 .quote-english {
     font-family: 'Noto Serif', serif;
     font-size: 18px;
@@ -74,23 +67,28 @@ h1 {
     line-height: 1.6;
     font-weight: 500;
 }
+
 .quote-author {
     font-style: italic;
     text-align: right;
     color: #6b7280;
     font-size: 0.8em;
 }
+
 .quote-source {
+    display: block;
     text-align: right;
     color: #6b7280;
     font-size: 0.8em;
     margin-top: 4px;
 }
+
 .navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
+
 .nav-button {
     background: none;
     border: none;
@@ -123,12 +121,13 @@ h1 {
 }
 
 .interpretation-chinese {
-/*    font-family: 'Ma Shan Zheng', cursive;*/
+    /*    font-family: 'Ma Shan Zheng', cursive;*/
     font-size: 24px;
     color: #2d3748;
     margin-bottom: 12px;
     line-height: 1.4;
 }
+
 .interpretation-english {
     font-family: 'Noto Serif', serif;
     font-size: 18px;
@@ -153,7 +152,9 @@ h1 {
 }
 
 @media (max-width: 600px) {
-    .quote-interpretation, .svg-container {
+
+    .quote-interpretation,
+    .svg-container {
         font-size: 14px;
     }
 }
@@ -200,10 +201,45 @@ h1 {
     z-index: 2000;
 }
 
+.page-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-nav {
+    margin-bottom: 1.5rem;
+}
+
 @media (max-width: 768px) {
-    .fixed-nav-button, .back-to-top {
+
+    .fixed-nav-button,
+    .back-to-top {
         width: 30px;
         height: 30px;
         font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .fade-out {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .slide-left {
+        transform: translateX(-100%);
+    }
+
+    .slide-right {
+        transform: translateX(100%);
     }
 }
