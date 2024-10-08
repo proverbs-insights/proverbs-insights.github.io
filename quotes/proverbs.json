@@ -1,0 +1,15 @@
+[
+    {
+        "english": "To be without some of the things you want is an indispensable part of happiness.",
+        "chinese": "缺乏一些你想要的东西是幸福的必备部分。",
+        "category": "philosophy",
+        "author": "Bertrand Arthur William Russell / 伯特兰·亚瑟·罗素",
+        "source": "《幸福的征服》（The Conquest of Happiness）",
+        "interpretation":
+        {
+            "en": "Bertrand Russell's quote, \"To be without some of the things you want is an indispensable part of happiness,\" suggests that happiness is not solely derived from fulfilling all our desires. Instead, it emphasizes the idea that accepting the absence of certain wants can lead to a more profound sense of contentment. This perspective encourages a focus on gratitude and acceptance, rather than constant pursuit of material or superficial desires. By embracing what we lack, we can find a deeper appreciation for what we have, leading to a more balanced and fulfilling life.",
+            "zh": "伯特兰·罗素所说的“缺少一些你想要的东西是幸福不可或缺的一部分”表明，幸福并不仅仅来自于满足所有的欲望。相反，这句话强调接受某些愿望的缺失可以带来更深层次的满足感。这种观点鼓励我们关注感恩和接受，而不是不断追求物质或表面的欲望。通过接受我们所缺乏的东西，我们可以更深刻地欣赏已经拥有的，从而过上更加平衡和充实的生活。"
+        },
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 600\"> <defs> <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;display=swap'); text { font-family: 'Noto Serif SC', serif; } </style> </defs> <rect width=\"100%\" height=\"100%\" fill=\"#f9f3e8\"/> <rect x=\"0\" y=\"10\" width=\"400\" height=\"580\" fill=\"none\" stroke=\"#4a4a4a\" stroke-width=\"2\"/> <text x=\"200\" y=\"50\" font-size=\"24\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#4a4a4a\">人文洞见</text> <line x1=\"40\" y1=\"70\" x2=\"360\" y2=\"70\" stroke=\"#4a4a4a\" stroke-width=\"1\"/> <text x=\"40\" y=\"100\" font-size=\"14\" fill=\"#4a4a4a\"> <tspan x=\"40\" dy=\"1.2em\">概念：幸福的缺失</tspan> <tspan x=\"40\" dy=\"1.2em\">相关学科：哲学、心理学、经济学</tspan> <tspan x=\"40\" dy=\"1.2em\">代表人物：伯特兰·罗素</tspan> </text> <line x1=\"40\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#4a4a4a\" stroke-width=\"1\"/> <text x=\"40\" y=\"180\" font-size=\"16\" fill=\"#2c3e50\"> <tspan x=\"40\" dy=\"1.4em\">幸福恰如一座古老的迷宫花园：</tspan> <tspan x=\"40\" dy=\"1.4em\">每一处缺失都是一扇通向新奇的门。</tspan> <tspan x=\"40\" dy=\"1.4em\">渴望如藤蔓攀爬，欲望似迷雾弥漫，</tspan> <tspan x=\"40\" dy=\"1.4em\">而缺失的空白处，恰是阳光洒落之地。</tspan> <tspan x=\"40\" dy=\"1.4em\">在这里，知足的智慧之花悄然绽放，</tspan> <tspan x=\"40\" dy=\"1.4em\">满足感在不完美中找到了完整。</tspan> </text> <circle cx=\"200\" cy=\"410\" r=\"80\" fill=\"none\" stroke=\"#2c3e50\" stroke-width=\"2\"/> <path d=\"M200,330 Q240,410 200,490 Q160,410 200,330\" fill=\"none\" stroke=\"#2c3e50\" stroke-width=\"2\"/> <line x1=\"40\" y1=\"510\" x2=\"360\" y2=\"510\" stroke=\"#4a4a4a\" stroke-width=\"1\"/> <text x=\"40\" y=\"520\" font-size=\"16\" fill=\"#4a4a4a\"> <tspan x=\"40\" dy=\"1.4em\">思考：我们是否应该重新定义\"拥有\"？</tspan> <tspan x=\"40\" dy=\"1.4em\">缺失如何塑造我们的价值观和幸福感？</tspan> </text></svg>"
+    }
+]
