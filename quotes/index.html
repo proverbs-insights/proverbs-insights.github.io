@@ -3,25 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotes - Proverbs Insights</title>
+    <title>名人名言新解 / Quotes Insights</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script async src="//changkun.de/urlstat/client.js"></script>
+    <script src="/assets/js/quotes.js"></script>
+    <style type="text/css">
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f8f4e5;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6dfcc' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .loading-content p {
+            margin-top: 20px;
+            color: #3730a3;
+        }
+
+        .book {
+            --color: #3730a3;
+            --duration: 6.8s;
+            width: 32px;
+            height: 12px;
+            position: relative;
+            margin: 32px 0 0 0;
+            zoom: 1.5;
+        }
+
+        .book .book__page {
+            width: 32px;
+            height: 12px;
+            background: var(--color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: 0 0;
+        }
+
+        .book .book__page:nth-child(1) {
+            animation: page-1 var(--duration) linear infinite;
+        }
+
+        .book .book__page:nth-child(2) {
+            animation: page-2 var(--duration) linear infinite;
+        }
+
+        .book .book__page:nth-child(3) {
+            animation: page-3 var(--duration) linear infinite;
+        }
+
+        @keyframes page-1 {
+            4% {
+                transform: rotateZ(0);
+            }
+            13%,
+            54% {
+                transform: rotateZ(180deg);
+            }
+            63%,
+            100% {
+                transform: rotateZ(0deg);
+            }
+        }
+
+        @keyframes page-2 {
+            4% {
+                transform: rotateZ(0);
+            }
+            13% {
+                transform: rotateZ(180deg);
+            }
+            23% {
+                transform: rotateZ(0);
+            }
+            54% {
+                transform: rotateZ(180deg);
+            }
+            63% {
+                transform: rotateZ(0);
+            }
+        }
+
+        @keyframes page-3 {
+            4% {
+                transform: rotateZ(0);
+            }
+            13% {
+                transform: rotateZ(180deg);
+            }
+            23% {
+                transform: rotateZ(0deg);
+            }
+            31% {
+                transform: rotateZ(180deg);
+            }
+            41% {
+                transform: rotateZ(0deg);
+            }
+            54% {
+                transform: rotateZ(180deg);
+            }
+            63% {
+                transform: rotateZ(0);
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const mainContent = document.getElementById('main-content');
+
+            // 资源加载
+            window.addEventListener('load', function() {
+                // 确保至少显示加载动画 1 秒，以防资源加载太快
+                setTimeout(function() {
+                    loadingScreen.style.opacity = '0';
+                    loadingScreen.style.transition = 'opacity 0.5s ease-out';
+                    
+                    setTimeout(function() {
+                        loadingScreen.style.display = 'none';
+                        mainContent.style.display = 'block';
+                    }, 500);
+                }, 1000);
+            });
+        });
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Quotes</h1>
-        <nav>
-            <a href="/" class="category-button">Home</a>
-            <a href="/languages/" class="category-button">Programming Languages</a>
-        </nav>
-        <div id="quoteDisplay" class="quote-card fade-in">
-            <!-- Quotes will be dynamically inserted here -->
-        </div>
-        <div class="navigation">
-            <button id="prevButton" class="nav-button">←</button>
-            <button id="nextButton" class="nav-button">→</button>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="book">
+                <div class="book__page"></div>
+                <div class="book__page"></div>
+                <div class="book__page"></div>
+            </div>
+            <p>Loading...</p>
         </div>
     </div>
-    <script src="/assets/js/script.js"></script>
+    <div id="main-content" class="container" style="display: none;">
+        <h1>名人名言新解</h1>
+        <h1>Quotes Insights</h1>
+        <div id="quoteCardContainer" class="quote-card-container">
+            <div id="quoteCard" class="quote-card fade-in"></div>
+        </div>
+        <div id="interpretationContainer">
+            <div id="quoteInterpretation" class="quote-interpretation"></div>
+            <div id="svgContainer" class="svg-container"></div>
+        </div>
+        <footer>
+            <p class="footer-text">Please read the <a href="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/master/CONTRIBUTING.md">contribution guidelines</a> before opening an <a href="https://github.com/proverbs-insights/proverbs-insights.github.io/issues/new">issue</a> to nominate a new proverb and insight. PV/UV: <span id="urlstat-page-pv"><!-- info will be inserted --></span>/<span id="urlstat-page-uv"><!-- info will be inserted --></p>
+            <p>&copy; 2024 TalkGo Technology</p>
+        </footer>
+    </div>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div class="navigation">
+        <button id="prevButton" class="fixed-nav-button left">←</button>
+        <button id="nextButton" class="fixed-nav-button right">→</button>
+        <button id="backToTop" class="back-to-top">↑</button>
+    </div>
+    
 </body>
 </html>
