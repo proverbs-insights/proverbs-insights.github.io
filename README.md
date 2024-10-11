@@ -1,4 +1,5 @@
-# proverbs-insights.github.io
+# Proverbs Insights
+
 <img src="https://changkun.de/urlstat?mode=github&repo=proverbs-insights/proverbs-insights.github.io" align="right" style="margin: 5px; margin-bottom: 20px;" />
 
 ## 项目介绍 Project Intro
@@ -7,9 +8,44 @@
 
 本项目的新解卡片完全是来自于 @李继刚老师 利用 Lisp 语法在 Claude 3.5 Sonnet 上利用 Artifacts 生成卡片，我基于 Go 语言和箴言设定重新再生成新的 Prompt。
 
-## 实现思路
+## 效果展示
 
-1. 首先，选定 @李继刚老师 的 [汉语新解](https://mp.weixin.qq.com/s/7CYRPFQxi37ONTlX0hfzRQ) Lisp 语法的提示词
+### [Go Proverbs Insights](https://proverbs-insights.github.io/languages/go/) Samples
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Proverbs.png" alt="Samples 1" style="width: 100%;">
+    </td>
+    <td>
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Insight.png" alt="Samples 2" style="width: 100%;">
+    </td>
+  </tr>
+</table>
+
+These content was inspired by the following projects:
+
+- https://go-proverbs.github.io
+- [Rob Pike's talk](https://www.youtube.com/watch?v=PAAkCSZUG1c)
+
+### [Quotes Proverbs Insights](https://proverbs-insights.github.io/quotes/) Samples
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/happiness-proverbs.png" alt="Samples 1" style="width: 100%;">
+    </td>
+    <td>
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/happiness-insights.png" alt="Samples 2" style="width: 100%;">
+    </td>
+  </tr>
+</table>
+
+## *实现思路*
+
+>还没有看过 @李继刚老师 的 [汉语新解](https://mp.weixin.qq.com/s/7CYRPFQxi37ONTlX0hfzRQ) ，强烈推荐看完再回过来看我的实现思路。
+
+1. 首先，选定 @李继刚老师 的 [汉语新解](https://mp.weixin.qq.com/s/7CYRPFQxi37ONTlX0hfzRQ) Lisp 语法的提示词。
 
 ```lisp
 ;; 作者: 李继刚
@@ -118,35 +154,15 @@ design-principles '(干净 简洁 典雅))
 
 这个 Prompt 设计旨在创造一个能够以新颖和有趣的方式探讨人文概念的 AI 角色。它将帮助用户从不同角度思考幸福、哲学、人文和历史等主题，提供独特的见解和启发。
 
-## 效果展示
-
-### [Go Proverbs Insights](https://proverbs-insights.github.io/languages/go/) Samples
+推荐大家微信搜索 “李继刚”。
 
 <table>
   <tr>
     <td>
-      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Proverbs.png" alt="Samples 1" style="width: 100%;">
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/write-prompt.png" alt="Samples 1" style="width: 100%;">
     </td>
     <td>
-      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/Simple-Poetic-Pithy-Insight.png" alt="Samples 2" style="width: 100%;">
-    </td>
-  </tr>
-</table>
-
-These content was inspired by the following projects:
-
-- https://go-proverbs.github.io
-- [Rob Pike's talk](https://www.youtube.com/watch?v=PAAkCSZUG1c)
-
-### [Quotes Proverbs Insights](https://proverbs-insights.github.io/quotes/) Samples
-
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/happiness-proverbs.png" alt="Samples 1" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/happiness-insight.png" alt="Samples 2" style="width: 100%;">
+      <img src="https://github.com/proverbs-insights/proverbs-insights.github.io/blob/main/assets/images/write-prompt-qrcode.png" alt="Samples 2" style="width: 100%;">
     </td>
   </tr>
 </table>
